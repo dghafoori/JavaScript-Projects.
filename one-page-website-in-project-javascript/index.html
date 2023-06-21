@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic HTML and CSS Website</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Welcome to my Basic HTML and CSS Website</h1>
+		<nav>
+		    <ul>
+		        <li><a href="#home">Home</a></li>
+		        <li><a href="#about">About</a></li>
+		        <li><a href="#services">Services</a></li>
+		        <li><a href="#contact">Contact</a></li>
+		    </ul>
+		</nav>
+
+	</header>
+	
+	<main>
+		<section>
+			<h2>Heading 2 Section</h2>
+			<p>This is a paragraph of text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+			<p>Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+		</section>
+		
+		<section>
+			<h2>Lists Section</h2>
+			<ul>
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+			</ul>
+			
+			<ol>
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+			</ol>
+		</section>
+		
+		<section>
+			<h2>Table Section</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Age</th>
+						<th>Gender</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>John</td>
+						<td>25</td>
+						<td>Male</td>
+					</tr>
+					<tr>
+						<td>Jane</td>
+						<td>30</td>
+						<td>Female</td>
+					</tr>
+					<tr>
+						<td>Bob</td>
+						<td>20</td>
+						<td>Male</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		
+		<section>
+			<h2>Images Section</h2>
+			<figure>
+				<img src="image.jpg" alt="Placeholder Image">
+				<figcaption>This is a caption for the image</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2 style="text-align:center">Lightbox Gallery</h2>
+
+			<div class="row">
+			  <div class="column">
+			    <img src="images/plant1.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+			  </div>
+			  <div class="column">
+			    <img src="images/plant2.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+			  </div>
+			  <div class="column">
+			    <img src="images/plant3.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+			  </div>
+			  <div class="column">
+			    <img src="images/plant4.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+			  </div>
+			</div>
+
+			<div id="myModal" class="modal">
+			  <span class="close cursor" onclick="closeModal()">&times;</span>
+			  <div class="modal-content">
+
+			    <div class="mySlides">
+			      <div class="numbertext">1 / 4</div>
+			      <img src="images/plant1.png" style="width:100%">
+			    </div>
+
+			    <div class="mySlides">
+			      <div class="numbertext">2 / 4</div>
+			      <img src="images/plant2.png" style="width:100%">
+			    </div>
+
+			    <div class="mySlides">
+			      <div class="numbertext">3 / 4</div>
+			      <img src="images/plant3.png" style="width:100%">
+			    </div>
+			    
+			    <div class="mySlides">
+			      <div class="numbertext">4 / 4</div>
+			      <img src="images/plant4.png" style="width:100%">
+			    </div>
+			    
+			    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			    <div class="caption-container">
+			      <p id="caption"></p>
+			    </div>
+
+
+			    <div class="column">
+			      <img class="demo cursor" src="images/plant1.png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="images/plant2.png" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="images/plant3.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="images/plant4.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+			    </div>
+			  </div>
+			</div>
+		</section>
+
+		<section id="video">
+		    <h2>Video Section</h2>
+		    <div class="video-container">
+		        <iframe width="560" height="315" src="https://www.youtube.com/embed/K4TOrB7at0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		    </div>
+		</section>
+
+		
+		<section>
+			<h2>Form Section</h2>
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name">
+				
+				<label for="email">Email:</label>
+				<input type="text" id="email" name="email">
+				
+				<label for="message">Message:</label>
+				<textarea id="message" name="message"></textarea>
+				
+				<input type="submit" value="Submit">
+			</form>
+		</section>
+	</main>
+	
+	<footer>
+		<p>&copy; 2023 Basic HTML and CSS Website. All rights reserved.</p>
+	</footer>
+
+	<script src="js/one_page_website.js"></script>
+</body>
